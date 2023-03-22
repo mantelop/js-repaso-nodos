@@ -21,6 +21,9 @@ const errorDatos = (elementoHTML) => {
 const crearTr=(name,price) => {
   let elBody = document.querySelector("#tbody")
   let elementoTr = document.createElement("tr")
-  elementoTr.innerHTML=`<td>${name}</td><td>${price}</td>`
+  elementoTr.innerHTML=`
+    <td>${name}</td>
+    <td>${price}</td>
+    `
   elBody.append(elementoTr)
 }
