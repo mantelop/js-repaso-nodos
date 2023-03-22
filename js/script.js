@@ -6,7 +6,7 @@ document.querySelector('#formulario').addEventListener('submit', (e) =>{
 
   
   if(!/[^/w ñÑ_#]+$/.test(nombreProducto.value.trim())) errorDatos(nombreProducto)
-  else if(!/(^[\d]+€?$)|(^[1][\d]*\.[\d]+€?$)/.test(precioProducto.value.trim())) errorDatos(precioProducto)
+  else if(!/[0-9]+(.[0-9]+)?€/.test(precioProducto.value.trim())) errorDatos(precioProducto)
   else crearElementoTr(nombreProducto.value,precioProducto.value)
 
 })
