@@ -1,17 +1,3 @@
-const crearTr=(name,price) => {
-  let elBody = document.querySelector("#tbody")
-  let elementoTr = document.createElement("tr")
-  elementoTr.innerHTML=`<td>${name}</td><td>${price}</td>`
-  elBody.append(elementoTr)
-}
-
-const errorDatos = (elementoHTML) => {
-  let errorElement=document.createElement('error')
-  errorElement.innerHTML = `'${elementoHTML.getAttribute('placeholder')}'${elementoHTML.parentElement.nextElementSibling.innerHTML}`
-  elementoHTML.parentElement.appendChild(errorElement)
-
-}
-
 document.querySelector('#formulario').addEventListener('submit', (e) =>{    
   e.preventDefault();
 
@@ -24,3 +10,17 @@ document.querySelector('#formulario').addEventListener('submit', (e) =>{
   else crearElementoTr(nombreProducto.value,precioProducto.value)
 
 })
+
+const errorDatos = (elementoHTML) => {
+  let errorElement=document.createElement('error')
+  errorElement.innerHTML = `'${elementoHTML.getAttribute('placeholder')}'${elementoHTML.parentElement.nextElementSibling.innerHTML}`
+  elementoHTML.parentElement.appendChild(errorElement)
+
+}
+
+const crearTr=(name,price) => {
+  let elBody = document.querySelector("#tbody")
+  let elementoTr = document.createElement("tr")
+  elementoTr.innerHTML=`<td>${name}</td><td>${price}</td>`
+  elBody.append(elementoTr)
+}
